@@ -1,7 +1,5 @@
 --Create a grocery store database
 
-
-
 CREATE TABLE SwitchStore (ID integer primary key, Name text, Price INTEGER, Stock INTEGER);
 
 INSERT INTO SwitchStore VALUES
@@ -24,8 +22,8 @@ INSERT INTO SwitchStore VALUES
 -- Which items are stocked below 2
 SELECT * FROM SwitchStore WHERE Stock <= 2;
 
--- Total of current stocks from the store
+-- Aggregate using SUM of current stocks from the store
 SELECT SUM(Stock) FROM SwitchStore
 
--- List of items ordered by price
+-- List of items ordered by price from highest to lowest
 SELECT * FROM SwitchStore ORDER BY price desc; 
