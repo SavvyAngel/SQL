@@ -1,0 +1,31 @@
+--Create a grocery store database
+
+
+
+CREATE TABLE SwitchStore (ID integer primary key, Name text, Price INTEGER, Stock INTEGER);
+
+INSERT INTO SwitchStore VALUES
+(1, "THUMBGRIPS", 10, 5),
+(2, "Case", 15, 5),
+(3, "Stand", 20, 3), 
+(4, "JellyCase", 5, 7), 
+(5, "Pen", 11, 4),
+(6, "Keychain", 3, 5),
+(7, "Gamecase", 9, 5), 
+(8, "Ninokuni", 30, 4), 
+(9, "Pokemon Y", 26, 1), 
+(10, "Cooking Mama", 11, 2), 
+(11, "RE 4", 28, 3), 
+(12, "Hogwarts Legacy", 40, 2),
+(13, "Story Of Seasons Doraemon", 25, 3), 
+(14, "Dock cover", 20, 2), 
+(15, "charger", 11, 4);
+
+-- Which items are stocked below 2
+SELECT * FROM SwitchStore WHERE Stock <= 2;
+
+-- Total of current stocks from the store
+SELECT SUM(Stock) FROM SwitchStore
+
+-- List of items ordered by price
+SELECT * FROM SwitchStore ORDER BY price desc; 
